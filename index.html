@@ -166,3 +166,11 @@ function showPage() {
 <div class="footer">
 <img "left" alt="web"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStoywsZEXK8fQ_zJX_3uCU245AHtuWpBM6JTN7Cl_PHL8PQspH3jOxwtYWFtzs9aFioYA&usqp=CAU" width="40" height="40"><p> ©Videotron 2025 </p>
 </div>
+<p>Your IP: <span id="user-ip">Loading...</span></p>
+<script>
+  fetch('https://api.ipify.org?format=json')
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('user-ip').textContent = data.ip;
+    });
+</script>
